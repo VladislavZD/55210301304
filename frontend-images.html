@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Картинка</title>
+    <style>
+        .image-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+        }
+        .image-card img {
+            max-width: 200px;
+            max-height: 150px;
+            display: block;
+        }
+        .upload-form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .upload-form input, .upload-form button {
+            margin: 5px;
+            padding: 8px;
+        }
+        .show-button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .show-button:hover {
+            background-color: #0056b3;
+        }
+        h1, h2 {
+            color: #333;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Картинки</h1>
+    
+    <div class="upload-form">
+        <h2>Загрузить новую картинку</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image_file" accept="image/*" required>
+            <button type="submit" class="show-button">Загрузить</button>
+        </form>
+    </div>
+    
+    <form method="POST">
+        <button type="submit" name="show_images" value="{{next_show_value}}" class="show-button">
+            {{button_text}}
+        </button>
+    </form>
+    
+    {{images_html}}
+</body>
+</html>f
