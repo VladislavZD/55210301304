@@ -118,7 +118,7 @@ sudo apt install php-pgsql
 
 Запуск:
 
-    http://localhost:8080/select2.php
+    http://localhost:8080/select1.php
 
 ## 5. Переход на Python
 
